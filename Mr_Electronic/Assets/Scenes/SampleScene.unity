@@ -882,6 +882,7 @@ MonoBehaviour:
   thrust: 12
   timeLeft: 4
   electricity: {fileID: 2044742064}
+  slider: {fileID: 2044742062}
 --- !u!136 &1098732977
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1128,6 +1129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2044742063}
   - component: {fileID: 2044742064}
+  - component: {fileID: 2044742065}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1207,6 +1209,25 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &2044742065
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044742062}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b935a8300400f407c81eb7d33448eed5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2093437676
 GameObject:
   m_ObjectHideFlags: 0
