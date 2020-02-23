@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class player : MonoBehaviour
 {
-    public float thrust = 10f;
-    public float timeLeft = 8f;
+    public float thrust = 12f;
+    public float timeLeft = 4f;
+    public Slider electricity;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +26,14 @@ public class player : MonoBehaviour
         if (other.tag == "insulator"){
             timeLeft -= Time.deltaTime;
                 if (timeLeft < .5f){
-                    timeLeft = 8f;
-                    if (thrust <= .5f){
-                        thrust = .5f;
+                    timeLeft = 4f;
+                    if (thrust <= 2f){
+                        thrust = 2f;
+                        electricity.value = thrust;
                     }
                     else{
                         thrust -= 2;
+                        electricity.value = thrust;
                     }
                 }
         }
@@ -37,12 +41,14 @@ public class player : MonoBehaviour
         if (other.tag == "conductor"){
             timeLeft -= Time.deltaTime;
                 if (timeLeft < 0){
-                    timeLeft = 8f;
-                    if (thrust >= 30){
-                        thrust = 30;
+                    timeLeft = 4f;
+                    if (thrust >= 22){
+                        thrust = 22;
+                        electricity.value = thrust;
                     }
                     else{
                         thrust += 2;
+                        electricity.value = thrust;
                     }
                 }
         }
