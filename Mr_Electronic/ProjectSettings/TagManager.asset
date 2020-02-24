@@ -6,6 +6,7 @@ TagManager:
   tags:
   - insulator
   - conductor
+  - goal
   layers:
   - Default
   - TransparentFX
