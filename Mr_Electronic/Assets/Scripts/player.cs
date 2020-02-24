@@ -69,11 +69,11 @@ public class player : MonoBehaviour
 
     private void OnTriggerExit(Collider other) {
         if (other.tag == "insulator"){
-            timeLeft = 4f;
+            timeLeft = 2f;
         }
 
         if (other.tag == "conductor"){
-            timeLeft = 4f;
+            timeLeft = 2f;
         }
 
     }
