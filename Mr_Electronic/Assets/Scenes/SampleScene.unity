@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7034,7 +7034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c362637840b1b478891edd49a86e0bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 12
+  thrust: 20
   timeLeft: 4
   electricity: {fileID: 2044742064}
   slider: {fileID: 2044742062}
@@ -14045,9 +14045,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1053353407}
   m_Direction: 0
   m_MinValue: 2
-  m_MaxValue: 22
+  m_MaxValue: 36
   m_WholeNumbers: 1
-  m_Value: 12
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

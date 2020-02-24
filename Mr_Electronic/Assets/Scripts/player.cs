@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class player : MonoBehaviour
 {
-    public float thrust = 12f;
+    public float thrust = 20f;
     public float timeLeft = 2f;
     public Slider electricity;
     public GameObject slider;
@@ -29,14 +29,14 @@ public class player : MonoBehaviour
             timeLeft -= Time.deltaTime;
                 if (timeLeft < 0f){
                     timeLeft = 2f;
-                    if (thrust == 4f){
-                        thrust -= 2f;
+                    if (thrust == 8f){
+                        thrust -= 4f;
                         electricity.value = thrust;
                         //possible animation letting player know they only have one tick left
                         slider.GetComponent<Animator>().SetTrigger("danger");
                     }
                     else{
-                        thrust -= 2f;
+                        thrust -= 4f;
                         electricity.value = thrust;
                     }
                     if (thrust <= 0f){
@@ -49,17 +49,17 @@ public class player : MonoBehaviour
             timeLeft -= Time.deltaTime;
                 if (timeLeft < 0f){
                     timeLeft = 2f;
-                    if (thrust == 20f){
-                        thrust += 2f;
+                    if (thrust == 32f){
+                        thrust += 4f;
                         electricity.value = thrust;
                         //possible animation letting player know they only have one tick left
                         slider.GetComponent<Animator>().SetTrigger("danger");
                     }
                     else{
-                        thrust += 2f;
+                        thrust += 4f;
                         electricity.value = thrust;
                     }
-                    if (thrust >= 24f){
+                    if (thrust >= 40f){
                         SceneManager.LoadScene(0);
                     }
                 }
