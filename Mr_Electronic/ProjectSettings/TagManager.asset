@@ -7,6 +7,7 @@ TagManager:
   - insulator
   - conductor
   - goal
+  - death
   layers:
   - Default
   - TransparentFX

@@ -34,7 +34,6 @@ public class player : MonoBehaviour
                         electricity.value = thrust;
                         //possible animation letting player know they only have one tick left
                         slider.GetComponent<Animator>().SetTrigger("danger");
-                        Debug.Log("fuck");
                     }
                     else{
                         thrust -= 2f;
@@ -76,5 +75,15 @@ public class player : MonoBehaviour
             timeLeft = 2f;
         }
 
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.tag == "death"){
+           SceneManager.LoadScene(0); 
+        }
+
+        if (other.tag == "goal"){
+            SceneManager.LoadScene(1);
+        }
     }
 }
