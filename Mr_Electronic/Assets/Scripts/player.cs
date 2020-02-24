@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class player : MonoBehaviour
 {
     public float thrust = 12f;
-    public float timeLeft = 4f;
+    public float timeLeft = 2f;
     public Slider electricity;
     public GameObject slider;
 
@@ -28,7 +28,7 @@ public class player : MonoBehaviour
         if (other.tag == "insulator"){
             timeLeft -= Time.deltaTime;
                 if (timeLeft < 0f){
-                    timeLeft = 4f;
+                    timeLeft = 2f;
                     if (thrust == 4f){
                         thrust -= 2f;
                         electricity.value = thrust;
@@ -49,7 +49,7 @@ public class player : MonoBehaviour
         if (other.tag == "conductor"){
             timeLeft -= Time.deltaTime;
                 if (timeLeft < 0f){
-                    timeLeft = 4f;
+                    timeLeft = 2f;
                     if (thrust == 20f){
                         thrust += 2f;
                         electricity.value = thrust;
