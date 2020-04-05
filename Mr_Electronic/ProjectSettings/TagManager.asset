@@ -8,6 +8,8 @@ TagManager:
   - conductor
   - goal
   - death
+  - insulatorItem
+  - conductorItem
   layers:
   - Default
   - TransparentFX
