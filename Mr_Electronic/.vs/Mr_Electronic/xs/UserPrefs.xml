@@ -1,4 +1,4 @@
-﻿<Properties>
+﻿<Properties StartupConfiguration="{4A4C11EA-619D-E26D-2440-B6E8B965E908}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/player.cs">
     <Files>
       <File FileName="Assets/Scripts/player.cs" Line="90" Column="1" />
@@ -11,6 +11,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="1934fd7c-c789-4fa1-9a03-20d311ed52e2" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <DisabledProjects>
     <String>Assembly-CSharp.csproj</String>

@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class player : MonoBehaviour
 {
-    public float thrust = 20f;
-    public float timeLeft = 2f;
+    public float thrust = 40f;
+    public float timeLeft = 1f;
     public Slider electricity;
     public GameObject slider;
     public int insuItem;
@@ -30,14 +30,14 @@ public class player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && insuItem > 0){
             insuItem -= 1;
             insuText.text = "" + insuItem;
-            if (thrust == 8f){
-                thrust -= 4f;
+            if (thrust == 20f){
+                thrust -= 20f;
                 electricity.value = thrust;
                 //possible animation letting player know they only have one tick left
                 slider.GetComponent<Animator>().SetTrigger("danger");
             }
             else{
-                thrust -= 4f;
+                thrust -= 20f;
                 electricity.value = thrust;
             }
             if (thrust <= 0f){
@@ -47,17 +47,17 @@ public class player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && condItem > 0){
             condItem -= 1;
             condText.text = "" + condItem;
-            if (thrust == 32f){
-                thrust += 4f;
+            if (thrust == 60f){
+                thrust += 20f;
                 electricity.value = thrust;
                 //possible animation letting player know they only have one tick left
                 slider.GetComponent<Animator>().SetTrigger("danger");
             }
             else{
-                thrust += 4f;
+                thrust += 20f;
                 electricity.value = thrust;
             }
-            if (thrust >= 40f){
+            if (thrust >= 60f){
                 SceneManager.LoadScene(0);
             }
         }
@@ -67,15 +67,15 @@ public class player : MonoBehaviour
         if (other.tag == "insulator"){
             timeLeft -= Time.deltaTime;
                 if (timeLeft < 0f){
-                    timeLeft = 2f;
-                    if (thrust == 8f){
-                        thrust -= 4f;
+                    timeLeft = 1f;
+                    if (thrust == 10f){
+                        thrust -= 10f;
                         electricity.value = thrust;
                         //possible animation letting player know they only have one tick left
                         slider.GetComponent<Animator>().SetTrigger("danger");
                     }
                     else{
-                        thrust -= 4f;
+                        thrust -= 10f;
                         electricity.value = thrust;
                     }
                     if (thrust <= 0f){
@@ -87,18 +87,18 @@ public class player : MonoBehaviour
         if (other.tag == "conductor"){
             timeLeft -= Time.deltaTime;
                 if (timeLeft < 0f){
-                    timeLeft = 2f;
-                    if (thrust == 32f){
-                        thrust += 4f;
+                    timeLeft = 1f;
+                    if (thrust == 70f){
+                        thrust += 10f;
                         electricity.value = thrust;
                         //possible animation letting player know they only have one tick left
                         slider.GetComponent<Animator>().SetTrigger("danger");
                     }
                     else{
-                        thrust += 4f;
+                        thrust += 10f;
                         electricity.value = thrust;
                     }
-                    if (thrust >= 40f){
+                    if (thrust >= 80f){
                         SceneManager.LoadScene(0);
                     }
                 }
@@ -107,11 +107,11 @@ public class player : MonoBehaviour
 
     private void OnTriggerExit(Collider other) {
         if (other.tag == "insulator"){
-            timeLeft = 2f;
+            timeLeft = 1f;
         }
 
         if (other.tag == "conductor"){
-            timeLeft = 2f;
+            timeLeft = 1f;
         }
 
     }
