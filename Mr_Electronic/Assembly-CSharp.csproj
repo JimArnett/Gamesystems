@@ -65,6 +65,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\player.cs" />
     <Compile Include="Assets\Scripts\restart.cs" />
+    <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
+    <None Include="Assets\Textures and Sprites\SF UI\Background\LICENSE.txt" />
+    <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/delta98/Desktop/Gamesystems/Gamesystems/Mr_Electronic/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
