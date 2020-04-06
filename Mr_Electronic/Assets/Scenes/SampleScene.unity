@@ -1602,7 +1602,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 114.5, y: 46.2}
+  m_AnchoredPosition: {x: 111.92, y: 46.2}
   m_SizeDelta: {x: 200, y: 232.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &150281588
@@ -9179,8 +9179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c362637840b1b478891edd49a86e0bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 20
-  timeLeft: 4
+  thrust: 40
+  timeLeft: 1
   electricity: {fileID: 2044742064}
   slider: {fileID: 2044742062}
   insuItem: 0
@@ -9775,7 +9775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -25, y: 40.099983}
+  m_AnchoredPosition: {x: -28.4, y: 40.099983}
   m_SizeDelta: {x: 200, y: 232.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1158386420
@@ -9824,7 +9824,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Battery\n\n            'E'"
+  m_Text: " Battery\n\n            'E'"
 --- !u!222 &1158386422
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17663,7 +17663,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 80
   m_WholeNumbers: 1
-  m_Value: 80
+  m_Value: 40
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

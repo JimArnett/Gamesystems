@@ -30,14 +30,14 @@ public class player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && insuItem > 0){
             insuItem -= 1;
             insuText.text = "" + insuItem;
-            if (thrust == 20f){
-                thrust -= 20f;
+            if (thrust <= 30f){
+                thrust -= 30f;
                 electricity.value = thrust;
                 //possible animation letting player know they only have one tick left
                 slider.GetComponent<Animator>().SetTrigger("danger");
             }
             else{
-                thrust -= 20f;
+                thrust -= 30f;
                 electricity.value = thrust;
             }
             if (thrust <= 0f){
@@ -47,17 +47,17 @@ public class player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && condItem > 0){
             condItem -= 1;
             condText.text = "" + condItem;
-            if (thrust == 60f){
-                thrust += 20f;
+            if (thrust >= 50f){
+                thrust += 30f;
                 electricity.value = thrust;
                 //possible animation letting player know they only have one tick left
                 slider.GetComponent<Animator>().SetTrigger("danger");
             }
             else{
-                thrust += 20f;
+                thrust += 30f;
                 electricity.value = thrust;
             }
-            if (thrust >= 60f){
+            if (thrust >= 80f){
                 SceneManager.LoadScene(0);
             }
         }
@@ -68,7 +68,7 @@ public class player : MonoBehaviour
             timeLeft -= Time.deltaTime;
                 if (timeLeft < 0f){
                     timeLeft = 1f;
-                    if (thrust == 10f){
+                    if (thrust == 20f){
                         thrust -= 10f;
                         electricity.value = thrust;
                         //possible animation letting player know they only have one tick left
@@ -88,7 +88,7 @@ public class player : MonoBehaviour
             timeLeft -= Time.deltaTime;
                 if (timeLeft < 0f){
                     timeLeft = 1f;
-                    if (thrust == 70f){
+                    if (thrust == 60f){
                         thrust += 10f;
                         electricity.value = thrust;
                         //possible animation letting player know they only have one tick left
