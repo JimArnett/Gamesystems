@@ -14,12 +14,14 @@ public class player : MonoBehaviour
     public int condItem;
     public Text insuText;
     public Text condText;
-
+    Scene scene;
+    private int currentLevel = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        scene = SceneManager.GetActiveScene();
+        currentLevel = scene.buildIndex;
     }
 
     // Update is called once per frame
@@ -41,7 +43,7 @@ public class player : MonoBehaviour
                 electricity.value = thrust;
             }
             if (thrust <= 0f){
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(currentLevel);   
             }
         }
         if (Input.GetKeyDown(KeyCode.E) && condItem > 0){
@@ -58,7 +60,7 @@ public class player : MonoBehaviour
                 electricity.value = thrust;
             }
             if (thrust >= 80f){
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(currentLevel);
             }
         }
     }
@@ -79,7 +81,7 @@ public class player : MonoBehaviour
                         electricity.value = thrust;
                     }
                     if (thrust <= 0f){
-                        SceneManager.LoadScene(0);
+                        SceneManager.LoadScene(currentLevel);
                     }
                 }
         }
@@ -99,7 +101,7 @@ public class player : MonoBehaviour
                         electricity.value = thrust;
                     }
                     if (thrust >= 80f){
-                        SceneManager.LoadScene(0);
+                        SceneManager.LoadScene(currentLevel);
                     }
                 }
         }
@@ -118,11 +120,13 @@ public class player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == "death"){
-           SceneManager.LoadScene(0); 
+           //SceneManager.LoadScene(0);
+           SceneManager.LoadScene(currentLevel);
         }
 
         if (other.tag == "goal"){
-            SceneManager.LoadScene(1);
+            currentLevel++;
+            SceneManager.LoadScene(currentLevel);
         }
 
         if (other.tag == "insulatorItem"){

@@ -9409,8 +9409,6 @@ MonoBehaviour:
   condItem: 0
   insuText: {fileID: 5982317}
   condText: {fileID: 1812202567}
-  currentLevel: 2
-  numLevels: 3
 --- !u!136 &1098732977
 CapsuleCollider:
   m_ObjectHideFlags: 0
