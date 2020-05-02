@@ -33,13 +33,13 @@ public class player : MonoBehaviour
             insuItem -= 1;
             insuText.text = "" + insuItem;
             if (thrust <= 30f){
-                thrust -= 30f;
+                thrust -= 15f;
                 electricity.value = thrust;
                 //possible animation letting player know they only have one tick left
                 slider.GetComponent<Animator>().SetTrigger("danger");
             }
             else{
-                thrust -= 30f;
+                thrust -= 15f;
                 electricity.value = thrust;
             }
             if (thrust <= 0f){
@@ -50,13 +50,13 @@ public class player : MonoBehaviour
             condItem -= 1;
             condText.text = "" + condItem;
             if (thrust >= 50f){
-                thrust += 30f;
+                thrust += 15f;
                 electricity.value = thrust;
                 //possible animation letting player know they only have one tick left
                 slider.GetComponent<Animator>().SetTrigger("danger");
             }
             else{
-                thrust += 30f;
+                thrust += 15f;
                 electricity.value = thrust;
             }
             if (thrust >= 80f){
